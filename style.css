@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.game-container {
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  width: 360px;
+}
+
+h1 {
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 16px auto 12px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #f1f1f1;
+  font-size: 2.25rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 12px;
+  user-select: none;
+  transition: transform 0.08s ease, background 0.2s ease;
+}
+
+.cell:hover {
+  background: #e6f0ff;
+}
+
+.cell:active {
+  transform: scale(0.98);
+}
+
+#status {
+  margin: 8px 0 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+#reset {
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: none;
+  background: #4facfe;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+#reset:hover {
+  filter: brightness(0.95);
+}
+
+@media (max-width: 420px) {
+  .game-container { width: 100%; max-width: 360px; }
+  .cell { width: 90px; height: 90px; }
+}
